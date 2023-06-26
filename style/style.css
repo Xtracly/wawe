@@ -2,14 +2,14 @@
     box-sizing: border-box;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
 html,
 body {
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .container__header {
