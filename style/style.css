@@ -1,17 +1,16 @@
 * {
     box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .container {
     margin: 0 auto;
     max-width: 1200px;
-}
-
-.container__header {
-    margin: 0 auto;
-    max-width: 1920px;
-    padding: 0px 360px;
 }
 
 .school__container {
@@ -33,11 +32,13 @@
     color: #fff;
 }
 
-.nav {
+.header__menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+}
+
+.nav {
 }
 
 .nav-logo {
@@ -48,34 +49,19 @@
     color: #fff;
 }
 
-.nav-logo__inner {
-    font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    position: absolute;
-    top: -21px;
-    left: -145px;
-}
-
-.nav-logo__span {
-    font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    position: absolute;
-    top: 5px;
-    left: -168px;
-}
-
 .nav-list {
-    display: flex;
-    column-gap: 45px;
-    font-size: 24px;
-    font-weight: 400;
-    position: relative;
+	display: flex;
+	column-gap: 45px;
 }
 
 .nav-list__item {
     position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px; 
 }
 
 .nav-list__link::before {
@@ -118,8 +104,9 @@
     left: 49%;
 }
 
-.school {
+.school__inner {
     padding-top: 180px;
+    padding-bottom: 199px;
 }
 
 .section__title {
@@ -139,10 +126,6 @@
     letter-spacing: 0.6px;
     color: #242121;
     padding-bottom: 30px;
-}
-
-.school__text:last-child {
-    padding-bottom: 199px;
 }
 
 .school__main {
@@ -173,6 +156,10 @@
 .description {
     background-color: #F8F8F8;
     padding-top: 200px;
+}
+
+.description__inner {
+    padding-bottom: 200px;
 }
 
 .description__main {
@@ -228,6 +215,10 @@
     color: #242121;
 }
 
+.description__content {
+    padding-right: 57px;
+}
+
 .description__wave {
     position: relative;
 }
@@ -269,13 +260,7 @@
     padding-bottom: 18px;
 }
 
-.description__wave:nth-child(3) .description__wave-speech {
-    padding-bottom: 200px;
-}
-
 .description__wave-text {
-    width: 600px;
-    height: 53px; 
     font-size: 14px;
     font-weight: 300;
     line-height: 1.1;
@@ -284,13 +269,17 @@
 }
 
 .description__header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; /* простір між стовпцями */
+    display: flex;
+    justify-content: center;
+    gap: 64px;
 }
 
 .peaks__content {
-    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 92px;
+    margin-top: 18px;
+    margin-bottom: 300px;
 }
 .peaks__title {
     font-family: 'Raleway', sans-serif;
@@ -312,7 +301,6 @@
 }
 
 .peaks__text:last-child {
-    margin-bottom: 300px;
 }
 
 .peaks__right-side {
@@ -320,10 +308,8 @@
 }
 
 .peaks__img {
-    position: absolute;
-    left: 49%;
-    bottom: 110px;
-    width: 63%;
+    width: 550px;
+
 }
 
 .gallery__inner {
@@ -776,4 +762,82 @@ label.form-form {
 
 .footer__logo-png {
     margin-top: 68px;
+}
+
+@media screen and (max-width: 1366px) {
+
+}
+
+@media screen and (max-width: 1199px) {
+    .school__main {
+        flex-direction: column;
+        align-items: center;        
+    }
+    .description__main {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .description__header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .peaks__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery__list {
+        justify-content: center;
+        align-items: center;
+    }
+    .img__list {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 1140px) {
+    .slide__content-title {
+        font-size: 24px;
+        width: 404px;
+    }
+    .swiper-slide {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .slide__content-title {
+        font-size: 24px;
+    }
+
+    .swiper-slide {
+
+    }
+
+    .slide__content-text {
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .description__wave-text {
+        
+    }
+
+    .slide__content-title {
+        font-size: 20px;
+    }
+
+    .slide__content-text {
+        font-size: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0px;
+    }
 }
